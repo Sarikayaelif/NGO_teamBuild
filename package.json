@@ -1,0 +1,13 @@
+{
+  "name": "sarikaya-e-NGO-teamBuild",
+  "version": "1.0.0",
+  "description": "my first node app",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
