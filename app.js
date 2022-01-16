@@ -1,18 +1,20 @@
-import { createServer } from 'http';
+import express from 'express';
 
-
+const app = express();
 const port = process.env.PORT || 3000;
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-  //ya da bu sekilde yazailabilir
-  //res.setHeader('Content-Type', 'text/html');
-  //res.end('<h1>Hello World</h1>');
+app.get('/', (req, res) => {
+    res.send('hello from express!');
+})
 
-});
+app.get('/elif', (req, res) => {
+    res.send(`this is elif's page`);
+})
 
-server.listen(port,  () => {
+app.get('/jacob', (req, res) => {
+    res.send(`this is jacob's page`);
+})
+
+app.listen(port,  () => {
   console.log(`Server running at port:${port}/`);
 });
